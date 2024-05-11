@@ -1,7 +1,7 @@
 {
   "name": "poppy",
   "version": "0.1.0",
-  "homepage": "https://nlee113.github.io/poppy-flower",
+  "homepage": "https://nlee113.github.io/poppy-flower/poppy",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

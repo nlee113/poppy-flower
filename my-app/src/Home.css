@@ -1,0 +1,69 @@
+/* Home.css */
+h1 {
+    font-family: "Micro 5 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 40pt;
+    color: red;
+}
+h2 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    text-align: center;
+}
+h3 {
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: small;
+    text-align: center;
+}
+p {
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: small;
+}
+#free-palestine {
+    color: green;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-size: 20pt;
+    font-style: normal;
+    position: fixed;
+    bottom: 10px;
+    left: -250px; 
+}
+/* image stuff */
+.img-container1 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.img1 {
+    max-width: 30%; 
+    height: auto; 
+}
+
+.img-container2 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.img2 {
+    max-width: 20%; 
+    height: auto; 
+}
+
+.img-container2 > * {
+    flex: 1; 
+    margin: 0; 
+}
+
+
+

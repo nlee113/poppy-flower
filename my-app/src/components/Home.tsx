@@ -223,6 +223,7 @@ const Home = () => {
             <a href="https://ground.news/interest/israeli-palestinian-conflict"className="custom-link">https://ground.news/interest/israeli-palestinian-conflict</a>
             <p id="custom-link">Arab American News Issue #1845 (June 19-25, 2021)</p>
             <a href="https://thisweekinpalestine.com/the-palestine-sunbird/" className="custom-link">https://thisweekinpalestine.com/the-palestine-sunbird/</a>
+            <a href="https://github.com/nlee113/poppy-flower" className="custom-link">Link to my source code for this project</a>
         </div>
     );
 }

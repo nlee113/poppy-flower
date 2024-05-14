@@ -23,7 +23,13 @@ const storage = getStorage(app);
 
 const Home = () => {
     const [socialIssue, setsocialIssue] = useState<string | null>(null);
+    const [socialIssue2, setsocialIssue2] = useState<string | null>(null);
+    const [socialIssue3, setsocialIssue3] = useState<string | null>(null);
+    const [socialIssue4, setsocialIssue4] = useState<string | null>(null);
     const [popCulture, setpopCulture] = useState<string | null>(null);
+    const [popCulture2, setpopCulture2] = useState<string | null>(null);
+    const [popCulture3, setpopCulture3] = useState<string | null>(null);
+    const [popCulture4, setpopCulture4] = useState<string | null>(null);
     const [imageUrl1, setImageUrl1] = useState('');
     const [imageUrl2, setImageUrl2] = useState('');
     const [imageUrl3, setImageUrl3] = useState('');
@@ -42,6 +48,43 @@ const Home = () => {
                 } else {
                     console.log('broken document');
                 }
+
+                const docRef2 = doc(db, 'socialissue2', 'Giu5Z6McxFRkvqIvRsSo');
+                const docSnap2 = await getDoc(docRef2);
+
+                if (docSnap2.exists()) {
+                    const fieldValue = docSnap2.data()['Giu5Z6McxFRkvqIvRsSo'];
+                    //console.log(docSnap.data()); // document data check
+                    //console.log(fieldValue); // field value check
+                    setsocialIssue2(fieldValue);
+                } else {
+                    console.log('broken document');
+                }
+
+                const docRef3 = doc(db, 'socialissue3', 'xefcNfU7VDI1VsWLG8Pa');
+                const docSnap3 = await getDoc(docRef3);
+
+                if (docSnap3.exists()) {
+                    const fieldValue = docSnap3.data()['xefcNfU7VDI1VsWLG8Pa'];
+                    //console.log(docSnap.data()); // document data check
+                    //console.log(fieldValue); // field value check
+                    setsocialIssue3(fieldValue);
+                } else {
+                    console.log('broken document');
+                }
+
+                const docRef4 = doc(db, 'socialissue4', '9SeMyeqLjyiKaSCDqsXV');
+                const docSnap4 = await getDoc(docRef4);
+
+                if (docSnap4.exists()) {
+                    const fieldValue = docSnap4.data()['9SeMyeqLjyiKaSCDqsXV'];
+                    //console.log(docSnap.data()); // document data check
+                    //console.log(fieldValue); // field value check
+                    setsocialIssue4(fieldValue);
+                } else {
+                    console.log('broken document');
+                }
+
                 const popdocRef = doc(db, 'popculture', '8uUz8D0mx20Gc1KyP3hd');
                 const popdocSnap = await getDoc(popdocRef);
 
@@ -51,6 +94,37 @@ const Home = () => {
                 } else {
                     console.log('broken document');
                 }
+
+                const popdocRef2 = doc(db, 'popculture2', 'qddaLWZrSy5f5H7yUxmK');
+                const popdocSnap2 = await getDoc(popdocRef2);
+
+                if (popdocSnap2.exists()) {
+                    const fieldValue = popdocSnap2.data()['qddaLWZrSy5f5H7yUxmK'];
+                    setpopCulture2(fieldValue);
+                } else {
+                    console.log('broken document');
+                }
+
+                const popdocRef3 = doc(db, 'popculture3', 'BUSN3e0bal3OlVEoDs0Y');
+                const popdocSnap3 = await getDoc(popdocRef3);
+
+                if (popdocSnap3.exists()) {
+                    const fieldValue = popdocSnap3.data()['BUSN3e0bal3OlVEoDs0Y'];
+                    setpopCulture3(fieldValue);
+                } else {
+                    console.log('broken document');
+                }
+
+                const popdocRef4 = doc(db, 'popculture4', 'DS3M89hGQhEkbhaGZUqq');
+                const popdocSnap4 = await getDoc(popdocRef4);
+
+                if (popdocSnap4.exists()) {
+                    const fieldValue = popdocSnap4.data()['DS3M89hGQhEkbhaGZUqq'];
+                    setpopCulture4(fieldValue);
+                } else {
+                    console.log('broken document');
+                }
+
             } catch (error) {
                 console.error('Error fetching social issue:', error);
             }
@@ -85,11 +159,26 @@ const Home = () => {
         <div>
             <h1>Israeli-Palestinian Conflict</h1>
             <h2>Social Issue Overview</h2>
-            {socialIssue !== null ? (
-                <p>{socialIssue}</p>
-            ) : (
-                <p>loading...</p>
-            )}
+                {socialIssue !== null ? (
+                    <p>{socialIssue}</p>
+                ) : (
+                    <p>loading...</p>
+                )}
+                {socialIssue2 !== null ? (
+                    <p>{socialIssue2}</p>
+                ) : (
+                    <p>loading...</p>
+                )}
+                {socialIssue3 !== null ? (
+                    <p>{socialIssue3}</p>
+                ) : (
+                    <p>loading...</p>
+                )}
+                {socialIssue4 !== null ? (
+                    <p>{socialIssue4}</p>
+                ) : (
+                    <p>loading...</p>
+                )}
             <p id="free-palestine">Free Palestine</p>
             <h2>Intro to Pop Culture</h2>
                 <div className="img-container1">
@@ -106,13 +195,34 @@ const Home = () => {
                         <img className="img2" src={imageUrl3} alt="Image" />
                     )}
                 </div>
-                <h3>All Eyes on Rafa By Wednesday</h3>
-                <h2>Pop Culture Analysis</h2>
-                {popCulture !== null ? (
-                <p>{popCulture}</p>
-            ) : (
-                <p>loading...</p>
-            )}
+                <h3>All Eyes on Rafa by Wednesday</h3>
+            <h2>Pop Culture Analysis</h2>
+                    {popCulture !== null ? (
+                        <p>{popCulture}</p>
+                    ) : (
+                        <p>loading...</p>
+                    )}
+                    {popCulture2 !== null ? (
+                        <p>{popCulture2}</p>
+                    ) : (
+                        <p>loading...</p>
+                    )}
+                    {popCulture3 !== null ? (
+                        <p>{popCulture3}</p>
+                    ) : (
+                        <p>loading...</p>
+                    )}
+                    {popCulture4 !== null ? (
+                        <p>{popCulture4}</p>
+                    ) : (
+                        <p>loading...</p>
+                    )}
+            <h2>References</h2>
+            <a href="https://www.un.org/en/genocideprevention/genocide.shtml" className="custom-link">https://www.un.org/en/genocideprevention/genocide.shtml</a>
+            <a href="https://news.un.org/en/story/2024/03/1147976"className="custom-link">https://news.un.org/en/story/2024/03/1147976</a>
+            <a href="https://ground.news/interest/israeli-palestinian-conflict"className="custom-link">https://ground.news/interest/israeli-palestinian-conflict</a>
+            <p id="custom-link">Arab American News Issue #1845 (June 19-25, 2021)</p>
+            <a href="https://thisweekinpalestine.com/the-palestine-sunbird/" className="custom-link">https://thisweekinpalestine.com/the-palestine-sunbird/</a>
         </div>
     );
 }
